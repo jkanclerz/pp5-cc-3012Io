@@ -30,12 +30,7 @@ public class CreditCardReportingController {
 
     @GetMapping("/balances")
     public List<CardBlanceDto> cardsBalances() {
-
-        return Arrays.asList(
-                new CardBlanceDto("1234", BigDecimal.valueOf(1000)),
-                new CardBlanceDto("5678", BigDecimal.valueOf(2000)),
-                new CardBlanceDto("1290", BigDecimal.valueOf(8000))
-        );
+        return api.cardsBalances();
     }
 
     @PostMapping("/withdraw")
